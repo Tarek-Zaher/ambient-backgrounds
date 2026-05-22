@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ambient-backgrounds/blur-background",
+  "title": "Blur Background",
+  "category": "design",
+  "icon": "art",
+  "description": "An animated ambient blur background with inner content.",
+  "keywords": ["background", "ambient", "animation", "blur"],
+  "version": "0.1.0",
+  "textdomain": "ambient-backgrounds",
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"]
+  },
+  "attributes": {
+    "circleCount": { "type": "number", "default": 150 },
+    "baseRadius": { "type": "number", "default": 100 },
+    "rangeRadius": { "type": "number", "default": 200 },
+    "startingHue": { "type": "number", "default": 220 },
+    "rangeHue": { "type": "number", "default": 60 },
+    "backgroundColor": { "type": "string", "default": "hsla(0,0%,5%,1)" }
+  },
+  "editorScript": "file:./index.js",
+  "viewScript": "file:./view.js"
+}
