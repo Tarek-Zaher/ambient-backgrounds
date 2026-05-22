@@ -1,6 +1,6 @@
 # Ambient Backgrounds
 
-A WordPress plugin that adds animated ambient background blocks. Drop the **Blur Background** block onto a page, nest any content inside, and a noise-driven blurred-circle animation will fill the background behind it.
+A WordPress plugin that adds animated ambient background blocks. Drop the **Ambient Background** block onto a page, nest any content inside, and a noise-driven blurred-circle animation will fill the background behind it.
 
 ## Features
 
@@ -17,7 +17,7 @@ npm start        # watch mode
 npm run build    # production build (outputs to build/)
 ```
 
-The plugin reads from `build/blur-background/block.json` at runtime, so you must run a build before activating.
+The plugin reads from `build/ambient-background/block.json` at runtime, so you must run a build before activating.
 
 ## Installation
 

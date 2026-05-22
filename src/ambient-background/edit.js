@@ -8,9 +8,10 @@ import {
 	PanelBody,
 	RangeControl,
 	TextControl,
+	ToggleControl,
 } from '@wordpress/components';
 import { useEffect, useRef } from '@wordpress/element';
-import { startBlurBackground } from './animation';
+import { startAmbientBackground } from './animation';
 
 export default function Edit({ attributes, setAttributes }) {
 	const {
@@ -20,6 +21,8 @@ export default function Edit({ attributes, setAttributes }) {
 		startingHue,
 		rangeHue,
 		backgroundColor,
+		cycleHue,
+		hueSpeed,
 	} = attributes;
 
 	const blockProps = useBlockProps({
@@ -34,13 +37,15 @@ export default function Edit({ attributes, setAttributes }) {
 
 	useEffect(() => {
 		if (!bgRef.current) return undefined;
-		const cleanup = startBlurBackground(bgRef.current, {
+		const cleanup = startAmbientBackground(bgRef.current, {
 			circleCount,
 			baseRadius,
 			rangeRadius,
 			startingHue,
 			rangeHue,
 			backgroundColor,
+			cycleHue,
+			hueSpeed,
 		});
 		return cleanup;
 	}, [
@@ -50,6 +55,8 @@ export default function Edit({ attributes, setAttributes }) {
 		startingHue,
 		rangeHue,
 		backgroundColor,
+		cycleHue,
+		hueSpeed,
 	]);
 
 	return (
@@ -100,6 +107,22 @@ export default function Edit({ attributes, setAttributes }) {
 						onChange={(v) => setAttributes({ backgroundColor: v })}
 						help={__('Any valid CSS color, e.g. hsla(0,0%,5%,1) or #111111', 'ambient-backgrounds')}
 					/>
+					<ToggleControl
+						label={__('Cycle hue over time', 'ambient-backgrounds')}
+						checked={cycleHue}
+						onChange={(v) => setAttributes({ cycleHue: v })}
+						help={__('Slowly shifts all circle colors as the animation runs.', 'ambient-backgrounds')}
+					/>
+					{cycleHue && (
+						<RangeControl
+							label={__('Hue cycle speed', 'ambient-backgrounds')}
+							value={hueSpeed}
+							onChange={(v) => setAttributes({ hueSpeed: v })}
+							min={0}
+							max={1}
+							step={0.05}
+						/>
+					)}
 				</PanelBody>
 			</InspectorControls>
 			<div {...blockProps}>

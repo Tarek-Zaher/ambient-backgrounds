@@ -1,8 +1,8 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "ambient-backgrounds/blur-background",
-  "title": "Blur Background",
+  "name": "ambient-backgrounds/ambient-background",
+  "title": "Ambient Background",
   "category": "design",
   "icon": "art",
   "description": "An animated ambient blur background with inner content.",
@@ -19,7 +19,9 @@
     "rangeRadius": { "type": "number", "default": 200 },
     "startingHue": { "type": "number", "default": 220 },
     "rangeHue": { "type": "number", "default": 60 },
-    "backgroundColor": { "type": "string", "default": "hsla(0,0%,5%,1)" }
+    "backgroundColor": { "type": "string", "default": "hsla(0,0%,5%,1)" },
+    "cycleHue": { "type": "boolean", "default": false },
+    "hueSpeed": { "type": "number", "default": 1 }
   },
   "editorScript": "file:./index.js",
   "viewScript": "file:./view.js"

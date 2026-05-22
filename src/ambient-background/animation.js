@@ -89,7 +89,7 @@ class SimplexNoise {
  * Start the blur background animation inside `container`.
  * Returns a cleanup function that tears it down.
  */
-export function startBlurBackground(container, options = {}) {
+export function startAmbientBackground(container, options = {}) {
 	const {
 		circleCount = 150,
 		baseRadius = 100,
@@ -97,6 +97,8 @@ export function startBlurBackground(container, options = {}) {
 		startingHue = 220,
 		rangeHue = 60,
 		backgroundColor = 'hsla(0,0%,5%,1)',
+		cycleHue = false,
+		hueSpeed = 1,
 	} = options;
 
 	const circlePropsLength = circleCount * circlePropCount;
@@ -156,6 +158,7 @@ export function startBlurBackground(container, options = {}) {
 	}
 
 	function updateCircles() {
+		if (cycleHue) baseHue += hueSpeed;
 		for (let i = 0; i < circlePropsLength; i += circlePropCount) {
 			updateCircle(i);
 		}

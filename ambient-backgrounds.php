@@ -18,6 +18,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 function ambient_backgrounds_register_blocks() {
-	register_block_type( __DIR__ . '/build/blur-background' );
+	register_block_type( __DIR__ . '/build/ambient-background' );
 }
 add_action( 'init', 'ambient_backgrounds_register_blocks' );

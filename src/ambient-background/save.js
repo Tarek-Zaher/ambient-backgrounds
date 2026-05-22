@@ -8,6 +8,8 @@ export default function save({ attributes }) {
 		startingHue,
 		rangeHue,
 		backgroundColor,
+		cycleHue,
+		hueSpeed,
 	} = attributes;
 
 	const blockProps = useBlockProps.save({
@@ -18,6 +20,8 @@ export default function save({ attributes }) {
 		'data-starting-hue': startingHue,
 		'data-range-hue': rangeHue,
 		'data-background-color': backgroundColor,
+		'data-cycle-hue': cycleHue,
+		'data-hue-speed': hueSpeed,
 	});
 
 	return (

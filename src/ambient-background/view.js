@@ -1,15 +1,15 @@
-import { startBlurBackground } from './animation';
+import { startAmbientBackground } from './animation';
 
 function init() {
 	const blocks = document.querySelectorAll(
-		'.wp-block-ambient-backgrounds-blur-background'
+		'.wp-block-ambient-backgrounds-ambient-background'
 	);
 
 	blocks.forEach((block) => {
 		const canvas = block.querySelector('.ambient-background-canvas');
 		if (!canvas) return;
 
-		startBlurBackground(canvas, {
+		startAmbientBackground(canvas, {
 			circleCount: Number(block.dataset.circleCount) || 150,
 			baseRadius: Number(block.dataset.baseRadius) || 100,
 			rangeRadius: Number(block.dataset.rangeRadius) || 200,
@@ -17,6 +17,8 @@ function init() {
 			rangeHue: Number(block.dataset.rangeHue) || 60,
 			backgroundColor:
 				block.dataset.backgroundColor || 'hsla(0,0%,5%,1)',
+			cycleHue: block.dataset.cycleHue === 'true',
+			hueSpeed: Number(block.dataset.hueSpeed) || 1,
 		});
 	});
 }
