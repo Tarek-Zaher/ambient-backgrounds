@@ -27,7 +27,7 @@ The plugin reads from `build/ambient-background/block.json` at runtime, so you m
 
 ## Testing with wp-env
 
-Follow the steps outlined in the official WordPress Developer Docs [here]([https://developer.wordpress.org/block-editor/reference-guides/packages/packages-env/](https://developer.wordpress.org/block-editor/getting-started/devenv/get-started-with-wp-env/)) to test the plugin using wp-env.
+Follow the steps outlined in the official WordPress Developer Docs [here](https://developer.wordpress.org/block-editor/getting-started/devenv/get-started-with-wp-env/) to test the plugin using wp-env.
 
 ## Roadmap
 
