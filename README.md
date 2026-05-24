@@ -1,12 +1,12 @@
 # Ambient Backgrounds
 
-A WordPress plugin that adds animated ambient background blocks. Drop the **Ambient Background** block onto a page, nest any content inside, and a noise-driven blurred-circle animation will fill the background behind it.
+A WordPress plugin that adds animated, ambient, and customizable background blocks to the page editor. After activating the plugin you will see **Ambient Background** in your list of block options. Add it to the page like any other block and add any content inside. Customize the animation in the Block Editor SidePanel to match your brand or liking.
 
 ## Features
 
 - Block-editor native (Gutenberg)
 - Live animated preview inside the editor
-- Customizable circle count, radius range, hue range, starting hue, and background color
+- Customizable colors and animations.
 - Inner blocks: place any content on top of the background
 
 ## Development
@@ -76,5 +76,4 @@ npx @wordpress/env destroy   # remove containers and volumes
 ## Roadmap
 
 - Additional background types (selectable from a dropdown)
-- Color picker for background color (currently a CSS string field)
-- More motion controls (speed, blur strength, lifetime)
+- Better default formatting for Inner Blocks
