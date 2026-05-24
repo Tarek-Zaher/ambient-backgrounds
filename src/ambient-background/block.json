@@ -11,7 +11,13 @@
   "textdomain": "ambient-backgrounds",
   "supports": {
     "html": false,
-    "align": ["wide", "full"]
+    "align": ["wide", "full"],
+    "color": {
+      "text": true,
+      "link": true,
+      "background": false,
+      "gradients": false
+    }
   },
   "attributes": {
     "circleCount": { "type": "number", "default": 150 },
@@ -24,5 +30,6 @@
     "hueSpeed": { "type": "number", "default": 1 }
   },
   "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
   "viewScript": "file:./view.js"
 }

@@ -1,0 +1,23 @@
+/**
+ * Defaults for the Ambient Background block.
+ * Applied in both the editor and the frontend.
+ *
+ * Everything here is overridable: text/link color via the standard color
+ * toolbar (supports.color), padding/width by dropping the content inside a
+ * Group block, etc.
+ */
+
+.wp-block-ambient-backgrounds-ambient-background {
+	color: #ffffff;
+
+	a {
+		color: inherit;
+	}
+}
+
+.wp-block-ambient-backgrounds-ambient-background .ambient-background-content {
+	padding: 4rem 1.5rem;
+	max-width: var(--wp--style--global--content-size, 1100px);
+	margin-left: auto;
+	margin-right: auto;
+}
