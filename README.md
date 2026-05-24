@@ -25,7 +25,7 @@ The plugin reads from `build/ambient-background/block.json` at runtime, so you m
 2. Copy or symlink this folder into `wp-content/plugins/`.
 3. Activate **Ambient Backgrounds** in the WordPress admin.
 
-4. ## Testing with wp-env
+## Testing with wp-env
 
 Follow the steps outlined in the official WordPress Developer Docs [here]([https://developer.wordpress.org/block-editor/reference-guides/packages/packages-env/](https://developer.wordpress.org/block-editor/getting-started/devenv/get-started-with-wp-env/)) to test the plugin using wp-env.
 
