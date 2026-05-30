@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ambient-backgrounds/starfield",
+  "title": "Starfield",
+  "category": "design",
+  "icon": "star-filled",
+  "description": "An animated starfield background flying toward the viewer, with inner content.",
+  "keywords": ["background", "starfield", "stars", "space", "animation", "warp"],
+  "version": "0.1.0",
+  "textdomain": "ambient-backgrounds",
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"],
+    "color": {
+      "text": true,
+      "link": true,
+      "background": false,
+      "gradients": false
+    }
+  },
+  "attributes": {
+    "starCount": { "type": "number", "default": 5000 },
+    "speedFactor": { "type": "number", "default": 0.05 },
+    "backgroundColor": { "type": "string", "default": "#000000" },
+    "starColor": { "type": "string", "default": "#ffffff" },
+    "warpOnPress": { "type": "boolean", "default": true },
+    "warpSpeedFactor": { "type": "number", "default": 0.2 }
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}

@@ -19,5 +19,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 function ambient_backgrounds_register_blocks() {
 	register_block_type( __DIR__ . '/build/ambient-background' );
+	register_block_type( __DIR__ . '/build/starfield' );
 }
 add_action( 'init', 'ambient_backgrounds_register_blocks' );

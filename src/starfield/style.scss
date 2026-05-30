@@ -1,0 +1,16 @@
+/**
+ * Defaults for the Starfield block.
+ * Applied in both the editor and the frontend.
+ *
+ * Everything here is overridable: text/link color via the standard color
+ * toolbar (supports.color), padding/width by dropping the content inside a
+ * Group block, etc.
+ */
+
+.wp-block-ambient-backgrounds-starfield {
+	color: #ffffff;
+
+	a {
+		color: inherit;
+	}
+}
