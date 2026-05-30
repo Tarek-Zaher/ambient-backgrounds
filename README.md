@@ -1,12 +1,13 @@
 # Ambient Backgrounds
 
-A WordPress plugin that adds animated, ambient, and customizable background blocks to the page editor. After activating the plugin you will see **Ambient Background** in your list of block options. Add it to the page like any other block and add any content inside. Customize the animation in the Block Editor SidePanel to match your brand or liking.
+A WordPress plugin that adds an animated, ambient, and customizable background block to the page editor. After activating the plugin you will see **Ambient Background** in your list of block options. Add it to the page like any other block and add any content inside. Pick a background style — **Blur** or **Starfield** — from the **Type** dropdown, and customize the animation in the Block Editor side panel to match your brand or liking.
 
 ## Features
 
 - Block-editor native (Gutenberg)
 - Live animated preview inside the editor
-- Customizable colors and animations.
+- Selectable background styles (Blur and Starfield) from a dropdown
+- Customizable colors and animations
 - Inner blocks: place any content on top of the background
 
 ## Development
@@ -31,5 +32,5 @@ Follow the steps outlined in the official WordPress Developer Docs [here](https:
 
 ## Roadmap
 
-- Additional background types (selectable from a dropdown)
+- Additional background types in the Type dropdown
 - Better default formatting for Inner Blocks

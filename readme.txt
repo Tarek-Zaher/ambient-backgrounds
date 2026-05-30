@@ -12,14 +12,14 @@ Add animated, customizable ambient background blocks — a soft blur or a flying
 
 == Description ==
 
-Ambient Backgrounds adds animated, ambient, and fully customizable background blocks to the WordPress block editor (Gutenberg). Drop a background block onto any page, place your content inside it like any other block, and tune the animation from the block sidebar to match your brand.
+Ambient Backgrounds adds an animated, ambient, and fully customizable background block to the WordPress block editor (Gutenberg). Drop the **Ambient Background** block onto any page, place your content inside it like any other block, and tune the animation from the block sidebar to match your brand.
 
-The plugin currently provides two background types, each a native block:
+Pick a background style from the **Type** dropdown in the block sidebar:
 
-* **Ambient Background** — soft, noise-driven blurred circles that fade, swirl, and drift. Customize the circle count, radius, color hues, background color, and an optional slow hue cycle.
+* **Blur** — soft, noise-driven blurred circles that fade, swirl, and drift. Customize the circle count, radius, color hues, background color, and an optional slow hue cycle.
 * **Starfield** — a perspective starfield flying toward the viewer, with an optional "warp on press" speed boost. Customize the star count, speed, star color, and background color.
 
-Both blocks render a live animated preview directly in the editor and support inner blocks, so any content you add sits cleanly on top of the animation.
+The block renders a live animated preview directly in the editor and supports inner blocks, so any content you add sits cleanly on top of the animation.
 
 All animation runs on the client with the HTML canvas API. The plugin makes no external or remote calls.
 
@@ -38,14 +38,18 @@ The complete, un-minified source (including the build tooling) is available on G
 
 1. Upload the `ambient-backgrounds` folder to the `/wp-content/plugins/` directory, or install the plugin through the **Plugins** screen in WordPress.
 2. Activate the plugin through the **Plugins** screen in WordPress.
-3. Edit any page or post, click the block inserter, and add the **Ambient Background** or **Starfield** block.
-4. Add your content inside the block and adjust the animation settings in the block sidebar.
+3. Edit any page or post, click the block inserter, and add the **Ambient Background** block.
+4. Add your content inside the block, choose a style from the **Type** dropdown (Blur or Starfield), and adjust the animation settings in the block sidebar.
 
 == Frequently Asked Questions ==
 
-= Where do these blocks appear in the inserter? =
+= Where does the block appear in the inserter? =
 
-Both blocks are listed under the **Design** category. Search for "ambient", "background", or "starfield".
+The **Ambient Background** block is listed under the **Design** category. Search for "ambient", "background", "blur", or "starfield".
+
+= How do I switch between the blur and starfield styles? =
+
+Select the block, open the block settings sidebar, and choose **Blur** or **Starfield** from the **Type** dropdown. The controls below the dropdown change to match the selected style.
 
 = Can I put text and other blocks on top of the animation? =
 
@@ -63,5 +67,6 @@ The animation only runs on pages where you add a background block, and it uses `
 
 = 0.1.0 =
 * Initial release.
-* Adds the Ambient Background block (noise-driven blurred circles).
-* Adds the Starfield block (perspective starfield with optional warp-on-press).
+* Adds the Ambient Background block with a selectable background style.
+* Blur style: noise-driven blurred circles.
+* Starfield style: perspective starfield with optional warp-on-press.

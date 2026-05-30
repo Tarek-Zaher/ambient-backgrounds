@@ -1,6 +1,6 @@
 /**
- * Shared canvas animation: a perspective starfield flying toward the viewer.
- * Used by both the editor preview (edit.js) and the frontend (view.js).
+ * Canvas animation: a perspective starfield flying toward the viewer.
+ * One of the background styles offered by the Ambient Background block.
  *
  * Adapted from the Starfield component so it lives inside a block container
  * (sized to the container, not the whole window) and cleans up after itself.

@@ -5,8 +5,8 @@
   "title": "Ambient Background",
   "category": "design",
   "icon": "art",
-  "description": "An animated ambient blur background with inner content.",
-  "keywords": ["background", "ambient", "animation", "blur"],
+  "description": "An animated ambient background with inner content. Choose a blur or starfield style.",
+  "keywords": ["background", "ambient", "animation", "blur", "starfield"],
   "version": "0.1.0",
   "textdomain": "ambient-backgrounds",
   "supports": {
@@ -20,14 +20,22 @@
     }
   },
   "attributes": {
+    "backgroundType": { "type": "string", "default": "blur" },
+    "backgroundColor": { "type": "string", "default": "hsla(0,0%,5%,1)" },
+
     "circleCount": { "type": "number", "default": 150 },
     "baseRadius": { "type": "number", "default": 100 },
     "rangeRadius": { "type": "number", "default": 200 },
     "startingHue": { "type": "number", "default": 220 },
     "rangeHue": { "type": "number", "default": 60 },
-    "backgroundColor": { "type": "string", "default": "hsla(0,0%,5%,1)" },
     "cycleHue": { "type": "boolean", "default": false },
-    "hueSpeed": { "type": "number", "default": 1 }
+    "hueSpeed": { "type": "number", "default": 1 },
+
+    "starCount": { "type": "number", "default": 5000 },
+    "speedFactor": { "type": "number", "default": 0.05 },
+    "starColor": { "type": "string", "default": "#ffffff" },
+    "warpOnPress": { "type": "boolean", "default": true },
+    "warpSpeedFactor": { "type": "number", "default": 0.2 }
   },
   "editorScript": "file:./index.js",
   "style": "file:./style-index.css",
