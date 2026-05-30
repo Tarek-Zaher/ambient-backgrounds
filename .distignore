@@ -1,0 +1,19 @@
+# Files and folders excluded from the distributed plugin zip
+# (used by `wp-scripts plugin-zip`). Build tooling and demo assets
+# stay in the repo but are kept out of the package submitted to WordPress.org.
+
+.git
+.github
+.gitignore
+.distignore
+.editorconfig
+.vscode
+.idea
+node_modules
+src
+blueprint.json
+ambient-backgrounds.zip
+package.json
+package-lock.json
+README.md
+*.log
