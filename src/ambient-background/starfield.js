@@ -146,20 +146,24 @@ export function startStarfield(container, options = {}) {
 	// The canvas container itself has pointer-events disabled, so listen on the
 	// block wrapper (its parent), which receives events from the inner content.
 	const pressTarget = container.parentElement || container;
+	// Release on the container's own window. In the editor the block renders
+	// inside an iframe, so the global `window` never sees its mouseup/touchend;
+	// the owning document's window does (and on the frontend this is just window).
+	const releaseTarget = container.ownerDocument.defaultView || window;
 	pressTarget.addEventListener('mousedown', press);
 	pressTarget.addEventListener('touchstart', press, { passive: true });
-	window.addEventListener('mouseup', release);
-	window.addEventListener('touchend', release);
-	window.addEventListener('touchcancel', release);
+	releaseTarget.addEventListener('mouseup', release);
+	releaseTarget.addEventListener('touchend', release);
+	releaseTarget.addEventListener('touchcancel', release);
 
 	return () => {
 		cancelAnimationFrame(rafId);
 		observer.disconnect();
 		pressTarget.removeEventListener('mousedown', press);
 		pressTarget.removeEventListener('touchstart', press);
-		window.removeEventListener('mouseup', release);
-		window.removeEventListener('touchend', release);
-		window.removeEventListener('touchcancel', release);
+		releaseTarget.removeEventListener('mouseup', release);
+		releaseTarget.removeEventListener('touchend', release);
+		releaseTarget.removeEventListener('touchcancel', release);
 		if (canvas.parentNode) canvas.parentNode.removeChild(canvas);
 	};
 }
